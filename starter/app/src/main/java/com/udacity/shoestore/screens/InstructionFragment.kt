@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.screens
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.udacity.shoestore.databinding.FragmentWelcomeBinding
+import com.udacity.shoestore.R
+import com.udacity.shoestore.databinding.FragmentInstructionBinding
 
-class WelcomeFragment : Fragment() {
+class InstructionFragment : Fragment() {
 
-    private lateinit var binding: FragmentWelcomeBinding
+    private lateinit var binding: FragmentInstructionBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,7 +22,7 @@ class WelcomeFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_welcome,
+            R.layout.fragment_instruction,
             container,
             false
         )
@@ -32,10 +33,7 @@ class WelcomeFragment : Fragment() {
     }
 
     private fun setupButton() =
-        binding.buttonWelcomeNext.setOnClickListener {
-            findNavController().navigate(
-                WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment()
-            )
+        binding.buttonInstructionNext.setOnClickListener {
+            findNavController().navigate(InstructionFragmentDirections.actionInstructionFragmentToShoeListFragment())
         }
-
 }
