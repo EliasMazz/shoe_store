@@ -9,4 +9,10 @@
     <string name="button_next">Next</string>
     <string name="intruction_description">You are going to be able to create a list of shoes to organize your inventory</string>
     <string name="instruction_header">Intructions</string>
+    <string name="shoe_name_field_hint">Shoe name</string>
+    <string name="company_field_hint">Company</string>
+    <string name="shoe_size_field_hint">Shoe size</string>
+    <string name="shoe_description_field_hint">Description</string>
+    <string name="button_save">Save</string>
+    <string name="button_cancel">Cancel</string>
 </resources>
