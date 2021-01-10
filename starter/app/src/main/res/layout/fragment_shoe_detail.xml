@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="32dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_field_shoe_name"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="32dp"
+            android:hint="@string/shoe_name_field_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/EditText"
+                android:inputType="text"
+                android:maxLength="100" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_field_company"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="16dp"
+            android:hint="@string/company_field_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_field_shoe_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/EditText"
+                android:inputType="text"
+                android:maxLength="100" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_field_shoe_size"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="16dp"
+            android:hint="@string/shoe_size_field_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_field_company">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/EditText"
+                android:inputType="numberDecimal"
+                android:maxLength="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_field_shoe_description"
+            style="@style/TextInputLayout"
+            android:layout_marginTop="16dp"
+            android:hint="@string/shoe_description_field_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_field_shoe_size">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/EditText"
+                android:inputType="textImeMultiLine"
+                android:maxLength="400" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_save"
+            style="@style/Button"
+            android:layout_width="160dp"
+            android:text="@string/button_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_cancel"
+            style="@style/Button"
+            android:layout_width="160dp"
+            android:text="@string/button_cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
