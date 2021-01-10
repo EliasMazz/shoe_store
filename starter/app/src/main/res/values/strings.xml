@@ -4,4 +4,9 @@
     <string name="password_field_hint">Enter your password</string>
     <string name="login_button_text">Login</string>
     <string name="singin_button_text">Sig in</string>
+    <string name="welcome_header">Welcome</string>
+    <string name="welcome_description">To Shoe Store Inventory</string>
+    <string name="button_next">Next</string>
+    <string name="intruction_description">You are going to be able to create a list of shoes to organize your inventory</string>
+    <string name="instruction_header">Intructions</string>
 </resources>
