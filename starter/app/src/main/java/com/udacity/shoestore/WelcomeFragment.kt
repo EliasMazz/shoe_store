@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.udacity.shoestore.R
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
@@ -26,7 +26,16 @@ class WelcomeFragment : Fragment() {
             false
         )
 
+        setupButton()
 
         return binding.root
     }
+
+    private fun setupButton() =
+        binding.buttonWelcomeNext.setOnClickListener {
+            findNavController().navigate(
+                WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment()
+            )
+        }
+
 }
