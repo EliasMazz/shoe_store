@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aefb6e1a-36b6-409f-94e9-91bf7c0f55f4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mqxA3h0y2BXKjUN14WwDUZQhFX" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aefb6e1a-36b6-409f-94e9-91bf7c0f55f4" name="Default Changelist" comment="" />
+      <created>1610234775057</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610234775057</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2518" y="479" key="#Notifications" timestamp="1610234849584">
+      <screen x="1680" y="25" width="1920" height="1175" />
+    </state>
+    <state x="2518" y="479" key="#Notifications/1680.25.1920.1175/0.25.1680.1025@1680.25.1920.1175" timestamp="1610234849584" />
+    <state x="2104" y="271" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610234916661">
+      <screen x="1680" y="25" width="1920" height="1175" />
+    </state>
+    <state x="2104" y="271" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.25.1920.1175/0.25.1680.1025@1680.25.1920.1175" timestamp="1610234916661" />
+  </component>
+</project>
