@@ -33,11 +33,15 @@ class LoginFragment : Fragment() {
 
     private fun setupButtons() {
         binding.buttonLogin.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+            findNavController().navigate(
+                LoginFragmentDirections.actionLoginFragmentToWelcomeFragment()
+            )
         }
 
         binding.buttonSignin.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+            findNavController().navigate(
+                LoginFragmentDirections.actionLoginFragmentToWelcomeFragment()
+            )
         }
     }
 }
