@@ -11,7 +11,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_field_layout_email"
-            style="@style/LoginTextInputLayout"
+            style="@style/TextInputLayout"
             android:layout_marginTop="64dp"
             android:hint="@string/email_field_hint"
             app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/text_field_email"
-                style="@style/LoginEditText"
+                style="@style/EditText"
                 android:inputType="textEmailAddress"
                 android:maxLength="250" />
 
@@ -28,7 +28,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_field_layout_password"
-            style="@style/LoginTextInputLayout"
+            style="@style/TextInputLayout"
             android:layout_marginTop="16dp"
             android:hint="@string/password_field_hint"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/text_field_password"
-                style="@style/LoginEditText"
+                style="@style/EditText"
                 android:layout_marginTop="16dp"
                 android:inputType="textPassword"
                 android:maxLength="50" />
@@ -46,7 +46,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_login"
-            style="@style/LoginButton"
+            style="@style/Button"
             android:layout_marginTop="64dp"
             android:text="@string/login_button_text"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_signin"
-            style="@style/LoginButton"
+            style="@style/Button"
             android:layout_marginTop="8dp"
             android:text="@string/singin_button_text"
             app:layout_constraintEnd_toEndOf="parent"
