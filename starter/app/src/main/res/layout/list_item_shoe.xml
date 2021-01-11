@@ -1,25 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
 
     <data>
+
         <variable
             name="shoe"
-            type="com.udacity.shoestore.models.Shoe" />
+            type="com.udacity.shoestore.models.ShoeDataView" />
     </data>
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:layout_marginBottom="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
 
-        <TextView
-            android:id="@+id/nameItemView"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{shoe.name}"
-       />
+            android:layout_margin="16dp">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/text_view_name_header"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="Name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_view_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.name}"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_name_header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_name_header"
+                tools:text="Tenis power jump 2" />
+
+            <TextView
+                android:id="@+id/text_view_company_header"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lines="1"
+                android:text="Company"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/text_view_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_name_header" />
+
+            <TextView
+                android:id="@+id/text_view_company"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.company}"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_company_header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_company_header"
+                tools:text="Awesome shoe story" />
+
+            <TextView
+                android:id="@+id/text_view_size_header"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_company_header" />
+
+            <TextView
+                android:id="@+id/text_view_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.size}"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_size_header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_size_header"
+                tools:text="48" />
+
+            <TextView
+                android:id="@+id/text_view_description_header"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Description"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_size_header" />
+
+            <TextView
+                android:id="@+id/text_view_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:text="@{shoe.description}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_view_description_header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_description_header"
+                tools:text="A really awesome shoe design for awesome people =D" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 </layout>
