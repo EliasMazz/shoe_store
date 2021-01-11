@@ -12,27 +12,24 @@ import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
 
-    private lateinit var binding: FragmentWelcomeBinding
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        binding = DataBindingUtil.inflate(
+        val binding = DataBindingUtil.inflate<FragmentWelcomeBinding>(
             inflater,
             R.layout.fragment_welcome,
             container,
             false
         )
 
-        setupButton()
+        setupButton(binding)
 
         return binding.root
     }
 
-    private fun setupButton() =
+    private fun setupButton(binding: FragmentWelcomeBinding) =
         binding.buttonWelcomeNext.setOnClickListener {
             findNavController().navigate(
                 WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment()
