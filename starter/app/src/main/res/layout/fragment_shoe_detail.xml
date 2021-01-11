@@ -8,7 +8,7 @@
         android:padding="32dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_field_shoe_name"
+            android:id="@+id/input_layout_name"
             style="@style/TextInputLayout"
             android:layout_marginTop="32dp"
             android:hint="@string/shoe_name_field_hint"
@@ -17,6 +17,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_name"
                 style="@style/EditText"
                 android:inputType="text"
                 android:maxLength="100" />
@@ -24,45 +25,48 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_field_company"
+            android:id="@+id/input_layout_company"
             style="@style/TextInputLayout"
             android:layout_marginTop="16dp"
             android:hint="@string/company_field_hint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_field_shoe_name">
+            app:layout_constraintTop_toBottomOf="@id/input_layout_name">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_company"
                 style="@style/EditText"
                 android:inputType="text"
                 android:maxLength="100" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_field_shoe_size"
+            android:id="@+id/input_layout_size"
             style="@style/TextInputLayout"
             android:layout_marginTop="16dp"
             android:hint="@string/shoe_size_field_hint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_field_company">
+            app:layout_constraintTop_toBottomOf="@id/input_layout_company">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_size"
                 style="@style/EditText"
                 android:inputType="numberDecimal"
                 android:maxLength="2" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_field_shoe_description"
+            android:id="@+id/input_layout_description"
             style="@style/TextInputLayout"
             android:layout_marginTop="16dp"
             android:hint="@string/shoe_description_field_hint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_field_shoe_size">
+            app:layout_constraintTop_toBottomOf="@id/input_layout_size">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_description"
                 style="@style/EditText"
                 android:inputType="textImeMultiLine"
                 android:maxLength="400" />
