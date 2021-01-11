@@ -7,13 +7,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.screens.main.MainViewModel
 
 class ShoeDetailFragment : Fragment() {
-
-    private lateinit var binding: FragmentShoeDetailBinding
     private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -21,13 +20,19 @@ class ShoeDetailFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(
+        val binding = DataBindingUtil.inflate<FragmentShoeDetailBinding>(
             inflater,
             R.layout.fragment_shoe_detail,
             container,
             false
         )
 
+        setupButtons(binding)
+
+        return binding.root
+    }
+
+    private fun setupButtons(binding: FragmentShoeDetailBinding) {
         binding.buttonSave.setOnClickListener {
             viewModel.addShoeToList(
                 name = binding.editTextName.text.toString(),
@@ -36,8 +41,16 @@ class ShoeDetailFragment : Fragment() {
                 description = binding.editTextDescription.text.toString()
             )
 
+            navigateToShoeList()
         }
 
-        return binding.root
+        binding.buttonCancel.setOnClickListener {
+            navigateToShoeList()
+        }
     }
+
+    private fun navigateToShoeList() =
+        findNavController().navigate(
+            ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment()
+        )
 }
