@@ -38,5 +38,4 @@ class WelcomeFragment : Fragment() {
                 WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment()
             )
         }
-
 }
