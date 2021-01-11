@@ -31,7 +31,6 @@ class ShoeListFragment : Fragment() {
             false
         )
         binding.lifecycleOwner = this
-
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
@@ -51,6 +50,4 @@ class ShoeListFragment : Fragment() {
 
         return binding.root
     }
-
-
 }
