@@ -14,25 +14,27 @@ import com.udacity.shoestore.screens.main.MainViewModel
 
 class ShoeDetailFragment : Fragment() {
     private val viewModel: MainViewModel by activityViewModels()
+    private var _binding: FragmentShoeDetailBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentShoeDetailBinding>(
+        _binding = DataBindingUtil.inflate<FragmentShoeDetailBinding>(
             inflater,
             R.layout.fragment_shoe_detail,
             container,
             false
         )
 
-        setupButtons(binding)
+        setupButtons()
 
         return binding.root
     }
 
-    private fun setupButtons(binding: FragmentShoeDetailBinding) {
+    private fun setupButtons() {
         binding.buttonSave.setOnClickListener {
             viewModel.addShoeToList(
                 name = binding.editTextName.text.toString(),
@@ -53,4 +55,9 @@ class ShoeDetailFragment : Fragment() {
         findNavController().navigate(
             ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment()
         )
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }
