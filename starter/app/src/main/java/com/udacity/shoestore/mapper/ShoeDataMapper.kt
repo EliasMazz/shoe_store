@@ -14,14 +14,11 @@ object ShoeDataMapper {
         )
 
     fun mapFromViewData(
-        name: String,
-        company: String,
-        size: String,
-        description: String
+        shoe: ShoeDataView
     ) = Shoe(
-        name = name.ifEmpty { "Empty Name" },
-        company = company.ifEmpty { "Company Name" },
-        size = size.ifEmpty { "0" }.toInt(),
-        description = description
+        name = shoe.name.ifEmpty { "Empty Name" },
+        company = shoe.company.ifEmpty { "Company Name" },
+        size = shoe.size.ifEmpty { "0" }.toInt(),
+        description = shoe.description
     )
 }
