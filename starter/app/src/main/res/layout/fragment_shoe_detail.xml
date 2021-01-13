@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.screens.main.MainViewModel" />
+    </data>
+
+
     <!--ContraintLayout used as it's easier to design for adapting to screen changes using only one view group-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,7 +28,8 @@
                 android:id="@+id/edit_text_name"
                 style="@style/EditText"
                 android:inputType="text"
-                android:maxLength="100" />
+                android:maxLength="100"
+                android:text="@={viewModel.shoeDataView.name}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -38,7 +46,8 @@
                 android:id="@+id/edit_text_company"
                 style="@style/EditText"
                 android:inputType="text"
-                android:maxLength="100" />
+                android:maxLength="100"
+                android:text="@={viewModel.shoeDataView.company}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -54,7 +63,8 @@
                 android:id="@+id/edit_text_size"
                 style="@style/EditText"
                 android:inputType="numberDecimal"
-                android:maxLength="2" />
+                android:maxLength="2"
+                android:text="@={viewModel.shoeDataView.size}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -70,13 +80,15 @@
                 android:id="@+id/edit_text_description"
                 style="@style/EditText"
                 android:inputType="textImeMultiLine"
-                android:maxLength="400" />
+                android:maxLength="400"
+                android:text="@={viewModel.shoeDataView.description}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_save"
             style="@style/Button"
             android:layout_width="160dp"
+            android:onClick="@{() -> viewModel.onSave()}"
             android:text="@string/button_save"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -85,6 +97,7 @@
             android:id="@+id/button_cancel"
             style="@style/Button"
             android:layout_width="160dp"
+            android:onClick="@{() -> viewModel.onCancel()}"
             android:text="@string/button_cancel"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
